@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Madhumidha A | Full Stack Developer & AI Enthusiast</title>
+  <meta name="description" content="Portfolio of Madhumidha A - B.Tech IT student specializing in full-stack web development, deep learning, and AI solutions.">
+  
+  <!-- FontAwesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="custom-cursor-active">
+
+  <!-- Welcome Intro Screen Overlay -->
+  <div class="intro-screen" id="intro-screen">
+    <div class="intro-content">
+      <h1 class="intro-logo">MADHUMIDHA A</h1>
+      <h2 class="intro-sub">PORTFOLIO</h2>
+      <div class="intro-avatar-container">
+        <button class="intro-avatar-btn hover-magnetic" id="intro-enter-btn" title="Enter Portfolio">
+          <img src="madhumidha-photo.jpg" alt="Madhumidha A" class="intro-avatar-img">
+          <span class="click-me-badge">CLICK ME</span>
+        </button>
+      </div>
+      <p class="intro-instruction">Click the avatar to enter the experience</p>
+    </div>
+  </div>
+
+  <!-- Custom Cursor Elements -->
+  <div id="custom-cursor" class="custom-cursor"></div>
+  <div id="custom-cursor-dot" class="custom-cursor-dot"></div>
+  <div id="custom-cursor-text" class="custom-cursor-text"></div>
+
+  <!-- Background Particle Network -->
+  <canvas id="particles-canvas" class="particles-canvas"></canvas>
+
+
+  <!-- Sticky Glassmorphic Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="logo">MA<span class="dot">.</span></a>
+      
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li class="nav-btn-mobile"><a href="Madhumidha_A_Resume.pdf" download class="btn btn-outline btn-sm hover-magnetic">Resume <i class="fa-solid fa-download"></i></a></li>
+      </ul>
+      
+      <div class="nav-actions">
+        <button class="canvas-toggle hover-magnetic" id="canvas-toggle" aria-label="Toggle Infinite Canvas" title="Toggle Infinite Canvas Mode">
+          <i class="fa-solid fa-compass"></i>
+        </button>
+        <button class="sound-toggle hover-magnetic" id="sound-toggle" aria-label="Toggle Sound" title="Toggle Sound Interface">
+          <i class="fa-solid fa-volume-xmark"></i>
+        </button>
+        <a href="Madhumidha_A_Resume.pdf" download class="btn btn-outline btn-sm desktop-only hover-magnetic">Resume <i class="fa-solid fa-download"></i></a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle Navigation">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div id="main-wrapper">
+
+  <!-- Hero Section -->
+  <header id="home" class="hero-section">
+    <!-- Decorative background blobs -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    
+    <div class="hero-container">
+      <div class="hero-content">
+        <p class="hero-subtitle">Hello, I'm</p>
+        <h1 class="hero-title">Madhumidha A</h1>
+        <h2 class="hero-typing-container">
+          <span class="typing-text" id="typing-text">Full Stack Developer &amp; AI Enthusiast</span><span class="typed-cursor">|</span>
+        </h2>
+        <p class="hero-quote">"Building Intelligent Solutions, One Line of Code at a Time."</p>
+        <p class="hero-description">
+          I'm a B.Tech Information Technology student and aspiring Full Stack Developer with a strong interest in Artificial Intelligence and Machine Learning. I enjoy building modern, responsive web applications and intelligent solutions that address real-world problems. I'm passionate about learning new technologies, developing practical projects, and continuously improving my technical skills.
+        </p>
+        <div class="theme-customizer">
+          <span class="customizer-label">Accent Color</span>
+          <div class="customizer-colors">
+            <button class="color-dot active" data-theme="indigo" style="background-color: #6366F1;" title="Indigo / Violet"></button>
+            <button class="color-dot" data-theme="cyan" style="background-color: #06B6D4;" title="Cyan / Teal"></button>
+            <button class="color-dot" data-theme="emerald" style="background-color: #10B981;" title="Emerald / Jade"></button>
+            <button class="color-dot" data-theme="rose" style="background-color: #F43F5E;" title="Rose / Crimson"></button>
+          </div>
+        </div>
+        <div class="hero-ctas">
+          <a href="#projects" class="btn btn-primary hover-magnetic">View My Work <i class="fa-solid fa-arrow-right"></i></a>
+          <button class="btn btn-secondary hover-magnetic" id="voice-intro-btn" title="Listen to Voice Introduction">Listen to Intro <i class="fa-solid fa-volume-high"></i></button>
+          <a href="#contact" class="btn btn-secondary hover-magnetic">Get In Touch</a>
+        </div>
+      </div>
+      
+      <!-- Interactive Grid Graphic -->
+      <div class="hero-graphic">
+        <div class="graphic-card hover-tilt" id="hero-code-card">
+          <div class="card-glow"></div>
+          <div class="card-inner">
+            <div class="code-header">
+              <div class="window-controls">
+                <span class="circle-red"></span>
+                <span class="circle-yellow"></span>
+                <span class="circle-green"></span>
+              </div>
+              <div class="code-tabs">
+                <button class="code-tab active" data-tab="js">developer.js</button>
+                <button class="code-tab" data-tab="py">skills.py</button>
+                <button class="code-tab" data-tab="json">models.json</button>
+              </div>
+            </div>
+            <div class="code-editor-layout">
+              <div class="line-numbers">
+                <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span>
+              </div>
+              <pre class="code-body"><code id="code-content"><span class="keyword">const</span> <span class="variable">developer</span> = {
+  <span class="property">name</span>: <span class="string">"Madhumidha A"</span>,
+  <span class="property">education</span>: <span class="string">"B.Tech IT"</span>,
+  <span class="property">skills</span>: [<span class="string">"Full-Stack"</span>, <span class="string">"AI"</span>],
+  <span class="property">passion</span>: <span class="string">"Intelligent Solutions"</span>
+};
+
+<span class="keyword">function</span> <span class="function-name">buildFuture</span>(<span class="variable">idea</span>) {
+  <span class="keyword">return</span> <span class="variable">developer</span>.<span class="function-name">code</span>(<span class="variable">idea</span>);
+}</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Animated Scroll Down Icon -->
+      <div class="scroll-down-indicator" id="scroll-down-indicator">
+        <a href="#about" aria-label="Scroll Down">
+          <div class="mouse-icon">
+            <div class="wheel"></div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="about-section scroll-reveal">
+    <div class="section-container">
+      <div class="about-grid">
+        <div class="about-info">
+          <h2 class="section-title">About <span class="accent-text">Me</span></h2>
+          <p class="about-text">
+            I am a B.Tech Information Technology student passionate about full-stack web development and AI. I thrive on building creative solutions, writing clean code, and continuously mastering new technologies. 
+          </p>
+          <p class="about-text">
+            My journey includes hands-on experience in training deep learning models, integrating real-time computer vision feeds, and building full-stack MVC web applications.
+          </p>
+          
+          <!-- Key Certification Highlight -->
+          <div class="cert-highlight-card">
+            <div class="cert-icon-container">
+              <i class="fa-solid fa-certificate"></i>
+            </div>
+            <div class="cert-details">
+              <h4>MasterClass Certification</h4>
+              <p class="cert-desc">Successfully completed a <strong>30 Days MasterClass in Full Stack Development</strong> (January 08th - February 17th, 2026) conducted by <strong>NoviTech R&D Private Limited</strong>.</p>
+            </div>
+          </div>
+          
+          <a href="Madhumidha_A_Resume.pdf" download class="btn btn-outline mt-4 hover-magnetic">Download Resume <i class="fa-solid fa-file-pdf"></i></a>
+          
+          <!-- Interactive Skill Wheels -->
+          <div class="skills-radial-container">
+            <div class="radial-skill" data-percent="90">
+              <svg class="radial-svg" viewBox="0 0 80 80">
+                <circle class="radial-bg" cx="40" cy="40" r="32"></circle>
+                <circle class="radial-progress" cx="40" cy="40" r="32" style="stroke-dasharray: 201; stroke-dashoffset: 201;"></circle>
+              </svg>
+              <div class="radial-label">
+                <span class="radial-num">0%</span>
+                <span class="radial-text">Full Stack</span>
+              </div>
+            </div>
+            
+            <div class="radial-skill" data-percent="85">
+              <svg class="radial-svg" viewBox="0 0 80 80">
+                <circle class="radial-bg" cx="40" cy="40" r="32"></circle>
+                <circle class="radial-progress" cx="40" cy="40" r="32" style="stroke-dasharray: 201; stroke-dashoffset: 201;"></circle>
+              </svg>
+              <div class="radial-label">
+                <span class="radial-num">0%</span>
+                <span class="radial-text">Deep Learning</span>
+              </div>
+            </div>
+            
+            <div class="radial-skill" data-percent="80">
+              <svg class="radial-svg" viewBox="0 0 80 80">
+                <circle class="radial-bg" cx="40" cy="40" r="32"></circle>
+                <circle class="radial-progress" cx="40" cy="40" r="32" style="stroke-dasharray: 201; stroke-dashoffset: 201;"></circle>
+              </svg>
+              <div class="radial-label">
+                <span class="radial-num">0%</span>
+                <span class="radial-text">Python / AI</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="about-graphics">
+          <div class="photo-wrapper hover-tilt">
+            <div class="photo-border-1"></div>
+            <div class="photo-border-2"></div>
+            <div class="photo-frame">
+              <img src="madhumidha-photo.jpg" alt="Madhumidha A" class="profile-img">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Developer Dashboard Section -->
+  <section id="dashboard" class="dashboard-section scroll-reveal">
+    <div class="section-container">
+      <div class="section-header">
+        <h2 class="section-title">Developer <span class="accent-text">Dashboard</span></h2>
+        <p class="section-subtitle">Real-time stats, code contributions, and live services status</p>
+      </div>
+      
+      <div class="dashboard-grid">
+        <!-- Card 1: GitHub Stats -->
+        <div class="dashboard-card hover-tilt">
+          <div class="card-header">
+            <h3><i class="fa-brands fa-github"></i> GitHub Overview</h3>
+            <span class="pulse-indicator"></span>
+          </div>
+          <div class="github-stats">
+            <div class="stat-box">
+              <span class="stat-number">18+</span>
+              <span class="stat-label">Repos</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-number">340+</span>
+              <span class="stat-label">Commits</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-number">42 Days</span>
+              <span class="stat-label">Streak</span>
+            </div>
+          </div>
+          <div class="github-grid-container">
+            <p class="grid-title">Coding Activity (Last 12 Weeks)</p>
+            <div class="github-grid" id="github-contrib-grid">
+              <!-- Grid generated dynamically by JS -->
+            </div>
+            <div class="grid-legend">
+              <span>Less</span>
+              <span class="legend-square lvl-0"></span>
+              <span class="legend-square lvl-1"></span>
+              <span class="legend-square lvl-2"></span>
+              <span class="legend-square lvl-3"></span>
+              <span class="legend-square lvl-4"></span>
+              <span>More</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Card 2: LeetCode Metrics -->
+        <div class="dashboard-card hover-tilt">
+          <div class="card-header">
+            <h3><i class="fa-solid fa-code"></i> LeetCode Metrics</h3>
+            <span class="leetcode-rank">Rank: Top 15%</span>
+          </div>
+          <div class="leetcode-container">
+            <div class="leetcode-progress">
+              <svg class="leetcode-radial" viewBox="0 0 100 100">
+                <circle class="radial-bg" cx="50" cy="50" r="40"></circle>
+                <circle class="radial-progress-bar" id="leetcode-radial-bar" cx="50" cy="50" r="40" style="stroke-dasharray: 251; stroke-dashoffset: 251;"></circle>
+              </svg>
+              <div class="leetcode-center-text">
+                <span class="solved-num" id="solved-num">85</span>
+                <span class="solved-label">Solved</span>
+              </div>
+            </div>
+            <div class="leetcode-breakdown">
+              <div class="breakdown-item easy">
+                <span class="breakdown-label">Easy</span>
+                <strong>45 / 100</strong>
+              </div>
+              <div class="breakdown-item medium">
+                <span class="breakdown-label">Medium</span>
+                <strong>32 / 150</strong>
+              </div>
+              <div class="breakdown-item hard">
+                <span class="breakdown-label">Hard</span>
+                <strong>8 / 50</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Card 3: Live Application Status -->
+        <div class="dashboard-card status-card hover-tilt">
+          <div class="card-header">
+            <h3><i class="fa-solid fa-server"></i> System Status</h3>
+            <span class="status-live">ALL SYSTEMS ACTIVE</span>
+          </div>
+          <div class="status-list">
+            <div class="status-item">
+              <div class="status-meta">
+                <span class="status-name">Emotion Recognition API</span>
+                <span class="status-badge online">🟢 Online</span>
+              </div>
+              <div class="status-metrics">
+                <span>Latency: 128ms</span>
+                <span>Uptime: 99.9%</span>
+              </div>
+            </div>
+            <div class="status-item">
+              <div class="status-meta">
+                <span class="status-name">MVC E-Commerce Portal</span>
+                <span class="status-badge online">🟢 Online</span>
+              </div>
+              <div class="status-metrics">
+                <span>Latency: 84ms</span>
+                <span>Uptime: 100%</span>
+              </div>
+            </div>
+            <div class="status-item">
+              <div class="status-meta">
+                <span class="status-name">Portfolio CDN Endpoint</span>
+                <span class="status-badge online">🟢 Active</span>
+              </div>
+              <div class="status-metrics">
+                <span>Latency: 15ms</span>
+                <span>Uptime: 100%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 3D Globe Connection Network -->
+      <div class="dashboard-globe-card mt-6">
+        <div class="card-header">
+          <h3><i class="fa-solid fa-earth-asia"></i> Global CDN Nodes (3D Interactive Globe)</h3>
+          <span class="status-live">LIVE SYNCED</span>
+        </div>
+        <div class="globe-layout">
+          <div class="globe-canvas-wrapper">
+            <canvas id="three-globe-canvas"></canvas>
+          </div>
+          <div class="globe-info">
+            <h4>Active Server Nodes</h4>
+            <ul>
+              <li>📍 Coimbatore (Primary Host) <span class="ping">🟢 8ms</span></li>
+              <li>📍 London (CDN Edge Node) <span class="ping">🟢 48ms</span></li>
+              <li>📍 New York (Failover CDN) <span class="ping">🟢 112ms</span></li>
+              <li>📍 Singapore (API Gateway) <span class="ping">🟢 36ms</span></li>
+            </ul>
+            <p class="globe-desc">Hover and drag the 3D globe to rotate and explore the routing paths of Madhumidha's active portfolio services.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services-section scroll-reveal">
+    <div class="section-container">
+      <div class="section-header">
+        <h2 class="section-title">My <span class="accent-text">Services</span></h2>
+        <p class="section-subtitle">Specially curated services to bring modern web and intelligence to your projects</p>
+      </div>
+      
+      <div class="services-grid">
+        <!-- Service Card 1 -->
+        <div class="service-card">
+          <div class="service-glow"></div>
+          <div class="service-icon"><i class="fa-solid fa-laptop-code"></i></div>
+          <h3>Web Development</h3>
+          <p>Building responsive, accessible, and modern websites using HTML, CSS, JavaScript, and React framework.</p>
+        </div>
+        
+        <!-- Service Card 2 -->
+        <div class="service-card">
+          <div class="service-glow"></div>
+          <div class="service-icon"><i class="fa-solid fa-code-branch"></i></div>
+          <h3>Full Stack Development</h3>
+          <p>Creating robust end-to-end applications using Java Servlets, JSP, REST APIs, Node.js, and structured MVC architecture.</p>
+        </div>
+        
+        <!-- Service Card 3 -->
+        <div class="service-card">
+          <div class="service-glow"></div>
+          <div class="service-icon"><i class="fa-solid fa-brain"></i></div>
+          <h3>Machine Learning</h3>
+          <p>Developing AI solutions and deep learning models using Python, TensorFlow, Keras, CNN architectures, and OpenCV.</p>
+        </div>
+        
+        <!-- Service Card 4 -->
+        <div class="service-card">
+          <div class="service-glow"></div>
+          <div class="service-icon"><i class="fa-solid fa-database"></i></div>
+          <h3>Database Management</h3>
+          <p>Designing, building, and optimizing relational databases using MySQL and writing high-performance SQL queries.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects-section scroll-reveal">
+    <div class="section-container">
+      <div class="section-header">
+        <h2 class="section-title">My <span class="accent-text">Projects</span></h2>
+        <p class="section-subtitle">Explore some of my representative work across full-stack applications and AI models</p>
+      </div>
+      
+      <div class="projects-grid">
+        <!-- Project Card 1 -->
+        <div class="project-card">
+          <div class="project-inner">
+            <h3 class="project-title">Real-Time Facial Emotion Recognition</h3>
+            <p class="project-desc">
+              Built a CNN model trained on the FER-2013 dataset to classify 7 emotions with 70%+ accuracy. Integrated OpenCV for real-time face detection from live webcam feed.
+            </p>
+            <div class="project-tags">
+              <span>Python</span>
+              <span>TensorFlow</span>
+              <span>Keras</span>
+              <span>OpenCV</span>
+              <span>CNN</span>
+            </div>
+            <div class="project-links">
+              <button class="project-link view-details-btn hover-magnetic" data-project="emotion">View Details <i class="fa-solid fa-expand"></i></button>
+              <a href="https://github.com/Madhumidha-17/Real-Time-Facial-Emotion-Recognition-Using-Deep-Learning" target="_blank" class="project-link hover-magnetic">
+                GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Project Card 2 -->
+        <div class="project-card locked" id="locked-project-card">
+          <div class="project-inner">
+            <div class="lock-overlay" id="puzzle-lock-overlay">
+              <div class="lock-icon"><i class="fa-solid fa-lock"></i></div>
+              <h3>E-Commerce Store (Locked)</h3>
+              <p class="lock-desc">Solve this sequence to unlock this Full-Stack project:</p>
+              <div class="puzzle-container">
+                <span class="puzzle-seq">2, 4, 8, 16, ?</span>
+                <div class="puzzle-input-group">
+                  <input type="number" id="puzzle-answer" placeholder="Ans" class="puzzle-input">
+                  <button type="button" id="puzzle-submit-btn" class="btn btn-primary btn-sm">Solve</button>
+                </div>
+                <span id="puzzle-status" class="puzzle-status"></span>
+              </div>
+            </div>
+            <div class="unlocked-content" id="puzzle-unlocked-content" style="display: none;">
+              <span class="project-tag">Full-Stack Java</span>
+              <h3 class="project-title">E-Commerce Store</h3>
+              <p class="project-desc">
+                Developed a full-stack e-commerce web application with product browsing, shopping cart management, user authentication, and secure checkout using MVC architecture.
+              </p>
+              <div class="project-tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Java Servlets</span>
+                <span>JSP</span>
+                <span>MySQL</span>
+              </div>
+              <div class="project-links">
+                <button class="project-link view-details-btn hover-magnetic" data-project="ecommerce">View Details <i class="fa-solid fa-expand"></i></button>
+                <span class="project-link disabled">Unlocked <i class="fa-solid fa-unlock-keyhole"></i></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Project Card 3 -->
+        <div class="project-card">
+          <div class="project-inner">
+            <h3 class="project-title">Weather Dashboard</h3>
+            <p class="project-desc">
+              Built a responsive weather dashboard fetching real-time data via OpenWeatherMap API to display temperature, humidity, wind speed, and a detailed 5-day forecast.
+            </p>
+            <div class="project-tags">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>REST API</span>
+            </div>
+            <div class="project-links">
+              <button class="project-link view-details-btn hover-magnetic" data-project="weather">View Details <i class="fa-solid fa-expand"></i></button>
+              <span class="project-link disabled">API Dashboard <i class="fa-solid fa-check-circle"></i></span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Project Card 4 -->
+        <div class="project-card">
+          <div class="project-inner">
+            <h3 class="project-title">Quiz App</h3>
+            <p class="project-desc">
+              Created an interactive, web-based quiz application with multiple-choice questions, real-time score calculations, and dynamic, user-friendly rendering.
+            </p>
+            <div class="project-tags">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+            <div class="project-links">
+              <button class="project-link view-details-btn hover-magnetic" data-project="quiz">View Details <i class="fa-solid fa-expand"></i></button>
+              <span class="project-link disabled">Interactive UI <i class="fa-solid fa-gamepad"></i></span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section scroll-reveal">
+    <div class="section-container">
+      <div class="section-header">
+        <h2 class="section-title">Get In <span class="accent-text">Touch</span></h2>
+        <p class="section-subtitle">Whether you have an opportunity or just want to say hello — I'd love to connect!</p>
+      </div>
+      
+      <div class="contact-content">
+        <!-- Contact Cards / Info -->
+        <div class="contact-info">
+          <div class="info-card">
+            <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div class="info-details">
+              <h3>Email</h3>
+              <a href="mailto:madhumidha0717@gmail.com">madhumidha0717@gmail.com</a>
+            </div>
+          </div>
+          
+          <div class="info-card">
+            <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+            <div class="info-details">
+              <h3>Phone</h3>
+              <a href="tel:+918438268844">+91 8438268844</a>
+            </div>
+          </div>
+          
+          <div class="info-card">
+            <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="info-details">
+              <h3>Location</h3>
+              <p>Coimbatore, India</p>
+            </div>
+          </div>
+          
+          <div class="social-links">
+            <a href="https://github.com/Madhumidha-17" target="_blank" aria-label="GitHub" class="hover-magnetic"><i class="fa-brands fa-github"></i></a>
+            <a href="https://linkedin.com/in/madhumidha-a" target="_blank" aria-label="LinkedIn" class="hover-magnetic"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://leetcode.com/madhumidha_a" target="_blank" aria-label="LeetCode" class="hover-magnetic"><i class="fa-solid fa-code"></i></a>
+          </div>
+        </div>
+        
+        <!-- Interactive Form -->
+        <div class="contact-form-wrapper">
+          <form class="contact-form" id="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <input type="text" id="name" required placeholder=" ">
+                <label for="name">Name</label>
+              </div>
+              <div class="form-group">
+                <input type="email" id="email" required placeholder=" ">
+                <label for="email">Email</label>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <input type="text" id="subject" required placeholder=" ">
+              <label for="subject">Subject</label>
+            </div>
+            
+            <div class="form-group">
+              <textarea id="message" required placeholder=" " rows="5"></textarea>
+              <label for="message">Message</label>
+            </div>
+            
+            <button type="submit" class="btn btn-primary btn-block" id="form-submit-btn">
+              Send Message <i class="fa-solid fa-paper-plane"></i>
+            </button>
+            <div class="form-status" id="form-status"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <p>&copy; 2026 Madhumidha A. All rights reserved.</p>
+      <p class="footer-design">Designed with <i class="fa-solid fa-heart"></i> &amp; Custom Animations</p>
+    </div>
+  </footer>
+  </div> <!-- Close #main-wrapper -->
+
+  <!-- Project Modal Overlay -->
+  <div class="project-modal" id="project-modal">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-container">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close Modal"><i class="fa-solid fa-xmark"></i></button>
+      <div class="modal-header">
+        <span class="modal-tag" id="modal-tag">Project Detail</span>
+        <h3 class="modal-title" id="modal-title">Project Title</h3>
+      </div>
+      <div class="modal-body" id="modal-body">
+        <!-- Content populated dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating AI Chatbot Widget -->
+  <div class="chatbot-widget" id="chatbot-widget">
+    <button class="chatbot-toggle hover-magnetic" id="chatbot-toggle" title="Chat with AI Assistant">
+      <i class="fa-solid fa-comments"></i>
+      <span class="chat-pulse"></span>
+    </button>
+    
+    <div class="chatbot-window" id="chatbot-window">
+      <div class="chatbot-header">
+        <div class="chatbot-avatar">
+          <img src="madhumidha-photo.jpg" alt="AI Assistant">
+          <span class="active-dot"></span>
+        </div>
+        <div class="chatbot-title-container">
+          <h4>Madhu's AI Agent</h4>
+          <span>Online &amp; Ready</span>
+        </div>
+        <button class="chatbot-close" id="chatbot-close-btn"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      
+      <div class="chatbot-messages" id="chatbot-messages">
+        <div class="chat-message bot">
+          <p>Hello! I am Madhumidha's AI assistant. Ask me anything about her skills, projects, or how to contact her! Or select a prompt below.</p>
+        </div>
+      </div>
+      
+      <div class="chatbot-suggestions" id="chatbot-suggestions">
+        <button class="suggestion-chip" data-query="skills">Technical Skills</button>
+        <button class="suggestion-chip" data-query="projects">Key Projects</button>
+        <button class="suggestion-chip" data-query="contact">Contact Details</button>
+        <button class="suggestion-chip" data-query="certification">Certifications</button>
+      </div>
+      
+      <form class="chatbot-input-container" id="chatbot-form">
+        <input type="text" id="chatbot-input" placeholder="Type a message..." required autocomplete="off">
+        <button type="submit" class="chatbot-send-btn" id="chatbot-send-btn"><i class="fa-solid fa-paper-plane"></i></button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Floating Quest System HUD -->
+  <div class="quest-hud" id="quest-hud">
+    <button class="quest-toggle-btn hover-magnetic" id="quest-toggle-btn" title="View Quests & Badges">
+      <i class="fa-solid fa-gamepad"></i>
+      <span class="quest-badge-count" id="quest-badge-count">1/5</span>
+    </button>
+    <div class="quest-panel" id="quest-panel">
+      <div class="quest-header">
+        <h4><i class="fa-solid fa-trophy"></i> Coding Missions</h4>
+        <button id="quest-close-btn" type="button"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <ul class="quest-list">
+        <li class="quest-item completed" id="quest-intro">
+          <i class="fa-solid fa-circle-check"></i>
+          <span>Welcome: Enter the Site</span>
+        </li>
+        <li class="quest-item" id="quest-sound">
+          <i class="fa-regular fa-circle" id="ico-sound"></i>
+          <span>Curious: Toggle Sound on</span>
+        </li>
+        <li class="quest-item" id="quest-globe">
+          <i class="fa-regular fa-circle" id="ico-globe"></i>
+          <span>Explorer: Drag the 3D Globe</span>
+        </li>
+        <li class="quest-item" id="quest-chatbot">
+          <i class="fa-regular fa-circle" id="ico-chatbot"></i>
+          <span>Chitchat: Ask the AI Chatbot</span>
+        </li>
+        <li class="quest-item" id="quest-puzzle">
+          <i class="fa-regular fa-circle" id="ico-puzzle"></i>
+          <span>Codebreaker: Solve hidden puzzle</span>
+        </li>
+      </ul>
+      <div class="quest-reward">
+        <div class="reward-badge-locked" id="reward-badge">
+          <i class="fa-solid fa-medal"></i>
+          <span id="badge-label">AI Elite Badge Locked</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Confetti Canvas overlay -->
+  <canvas id="confetti-canvas" style="position:fixed; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:999999; display:none;"></canvas>
+
+  <!-- Three.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <!-- JS Script -->
+  <script src="script.js"></script>
+</body>
+</html>
