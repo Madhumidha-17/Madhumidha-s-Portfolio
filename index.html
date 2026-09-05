@@ -51,6 +51,7 @@
       <ul class="nav-menu" id="nav-menu">
         <li><a href="#home" class="nav-link active">Home</a></li>
         <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#github-activity" class="nav-link">GitHub Activity</a></li>
         <li><a href="#services" class="nav-link">Services</a></li>
         <li><a href="#projects" class="nav-link">Projects</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
@@ -162,10 +163,10 @@
         <div class="about-info">
           <h2 class="section-title">About <span class="accent-text">Me</span></h2>
           <p class="about-text">
-            I am a B.Tech Information Technology student passionate about full-stack web development and AI. I thrive on building creative solutions, writing clean code, and continuously mastering new technologies. 
+            I'm a B.Tech Information Technology student and aspiring Full Stack Developer &amp; AI Enthusiast. I enjoy building modern web applications and AI-powered solutions that solve real-world problems.
           </p>
           <p class="about-text">
-            My journey includes hands-on experience in training deep learning models, integrating real-time computer vision feeds, and building full-stack MVC web applications.
+            I'm passionate about learning new technologies, developing practical projects, and improving my problem-solving skills. My goal is to grow as a software developer and contribute to innovative projects.
           </p>
           
           <!-- Key Certification Highlight -->
@@ -175,7 +176,7 @@
             </div>
             <div class="cert-details">
               <h4>MasterClass Certification</h4>
-              <p class="cert-desc">Successfully completed a <strong>30 Days MasterClass in Full Stack Development</strong> (January 08th - February 17th, 2026) conducted by <strong>NoviTech R&D Private Limited</strong>.</p>
+              <p class="cert-desc">Successfully completed a <strong>30 Days MasterClass in Full Stack Development</strong> (January 08th - February 17th, 2026) conducted by <strong>NoviTech R&amp;D Private Limited</strong>.</p>
             </div>
           </div>
           
@@ -231,16 +232,15 @@
     </div>
   </section>
 
-  <!-- Developer Dashboard Section -->
-  <section id="dashboard" class="dashboard-section scroll-reveal">
+  <!-- GitHub Activity Section -->
+  <section id="github-activity" class="dashboard-section scroll-reveal">
     <div class="section-container">
       <div class="section-header">
-        <h2 class="section-title">Developer <span class="accent-text">Dashboard</span></h2>
-        <p class="section-subtitle">Real-time stats, code contributions, and live services status</p>
+        <h2 class="section-title">GitHub <span class="accent-text">Activity</span></h2>
+        <p class="section-subtitle">My coding journey, contributions, and open-source activity on GitHub.</p>
       </div>
       
-      <div class="dashboard-grid">
-        <!-- Card 1: GitHub Stats -->
+      <div class="github-activity-wrapper">
         <div class="dashboard-card hover-tilt">
           <div class="card-header">
             <h3><i class="fa-brands fa-github"></i> GitHub Overview</h3>
@@ -249,11 +249,11 @@
           <div class="github-stats">
             <div class="stat-box">
               <span class="stat-number">18+</span>
-              <span class="stat-label">Repos</span>
+              <span class="stat-label">Total Repositories</span>
             </div>
             <div class="stat-box">
               <span class="stat-number">340+</span>
-              <span class="stat-label">Commits</span>
+              <span class="stat-label">Contributions</span>
             </div>
             <div class="stat-box">
               <span class="stat-number">42 Days</span>
@@ -261,7 +261,7 @@
             </div>
           </div>
           <div class="github-grid-container">
-            <p class="grid-title">Coding Activity (Last 12 Weeks)</p>
+            <p class="grid-title">GitHub Contribution Graph (Last 12 Weeks)</p>
             <div class="github-grid" id="github-contrib-grid">
               <!-- Grid generated dynamically by JS -->
             </div>
@@ -274,103 +274,6 @@
               <span class="legend-square lvl-4"></span>
               <span>More</span>
             </div>
-          </div>
-        </div>
-        
-        <!-- Card 2: LeetCode Metrics -->
-        <div class="dashboard-card hover-tilt">
-          <div class="card-header">
-            <h3><i class="fa-solid fa-code"></i> LeetCode Metrics</h3>
-            <span class="leetcode-rank">Rank: Top 15%</span>
-          </div>
-          <div class="leetcode-container">
-            <div class="leetcode-progress">
-              <svg class="leetcode-radial" viewBox="0 0 100 100">
-                <circle class="radial-bg" cx="50" cy="50" r="40"></circle>
-                <circle class="radial-progress-bar" id="leetcode-radial-bar" cx="50" cy="50" r="40" style="stroke-dasharray: 251; stroke-dashoffset: 251;"></circle>
-              </svg>
-              <div class="leetcode-center-text">
-                <span class="solved-num" id="solved-num">85</span>
-                <span class="solved-label">Solved</span>
-              </div>
-            </div>
-            <div class="leetcode-breakdown">
-              <div class="breakdown-item easy">
-                <span class="breakdown-label">Easy</span>
-                <strong>45 / 100</strong>
-              </div>
-              <div class="breakdown-item medium">
-                <span class="breakdown-label">Medium</span>
-                <strong>32 / 150</strong>
-              </div>
-              <div class="breakdown-item hard">
-                <span class="breakdown-label">Hard</span>
-                <strong>8 / 50</strong>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Card 3: Live Application Status -->
-        <div class="dashboard-card status-card hover-tilt">
-          <div class="card-header">
-            <h3><i class="fa-solid fa-server"></i> System Status</h3>
-            <span class="status-live">ALL SYSTEMS ACTIVE</span>
-          </div>
-          <div class="status-list">
-            <div class="status-item">
-              <div class="status-meta">
-                <span class="status-name">Emotion Recognition API</span>
-                <span class="status-badge online">🟢 Online</span>
-              </div>
-              <div class="status-metrics">
-                <span>Latency: 128ms</span>
-                <span>Uptime: 99.9%</span>
-              </div>
-            </div>
-            <div class="status-item">
-              <div class="status-meta">
-                <span class="status-name">MVC E-Commerce Portal</span>
-                <span class="status-badge online">🟢 Online</span>
-              </div>
-              <div class="status-metrics">
-                <span>Latency: 84ms</span>
-                <span>Uptime: 100%</span>
-              </div>
-            </div>
-            <div class="status-item">
-              <div class="status-meta">
-                <span class="status-name">Portfolio CDN Endpoint</span>
-                <span class="status-badge online">🟢 Active</span>
-              </div>
-              <div class="status-metrics">
-                <span>Latency: 15ms</span>
-                <span>Uptime: 100%</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <!-- 3D Globe Connection Network -->
-      <div class="dashboard-globe-card mt-6">
-        <div class="card-header">
-          <h3><i class="fa-solid fa-earth-asia"></i> Global CDN Nodes (3D Interactive Globe)</h3>
-          <span class="status-live">LIVE SYNCED</span>
-        </div>
-        <div class="globe-layout">
-          <div class="globe-canvas-wrapper">
-            <canvas id="three-globe-canvas"></canvas>
-          </div>
-          <div class="globe-info">
-            <h4>Active Server Nodes</h4>
-            <ul>
-              <li>📍 Coimbatore (Primary Host) <span class="ping">🟢 8ms</span></li>
-              <li>📍 London (CDN Edge Node) <span class="ping">🟢 48ms</span></li>
-              <li>📍 New York (Failover CDN) <span class="ping">🟢 112ms</span></li>
-              <li>📍 Singapore (API Gateway) <span class="ping">🟢 36ms</span></li>
-            </ul>
-            <p class="globe-desc">Hover and drag the 3D globe to rotate and explore the routing paths of Madhumidha's active portfolio services.</p>
           </div>
         </div>
       </div>
@@ -427,16 +330,16 @@
     <div class="section-container">
       <div class="section-header">
         <h2 class="section-title">My <span class="accent-text">Projects</span></h2>
-        <p class="section-subtitle">Explore some of my representative work across full-stack applications and AI models</p>
+        <p class="section-subtitle">Explore my featured web development and AI-powered projects</p>
       </div>
       
       <div class="projects-grid">
-        <!-- Project Card 1 -->
+        <!-- Project Card 1: Real-Time Facial Emotion Recognition System -->
         <div class="project-card">
           <div class="project-inner">
-            <h3 class="project-title">Real-Time Facial Emotion Recognition</h3>
+            <h3 class="project-title">Real-Time Facial Emotion Recognition System</h3>
             <p class="project-desc">
-              Built a CNN model trained on the FER-2013 dataset to classify 7 emotions with 70%+ accuracy. Integrated OpenCV for real-time face detection from live webcam feed.
+              Built a CNN model trained on the FER-2013 dataset to classify 7 emotions with 70%+ accuracy. Integrated OpenCV for real-time face detection and live sentiment analysis.
             </p>
             <div class="project-tags">
               <span>Python</span>
@@ -445,88 +348,38 @@
               <span>OpenCV</span>
               <span>CNN</span>
             </div>
-            <div class="project-links">
-              <button class="project-link view-details-btn hover-magnetic" data-project="emotion">View Details <i class="fa-solid fa-expand"></i></button>
-              <a href="https://github.com/Madhumidha-17/Real-Time-Facial-Emotion-Recognition-Using-Deep-Learning" target="_blank" class="project-link hover-magnetic">
-                GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            <div class="project-links" style="gap: 16px; flex-wrap: wrap;">
+              <a href="https://github.com/Madhumidha-17/Real-Time-Facial-Emotion-Recognition-Using-Deep-Learning" target="_blank" class="btn btn-primary btn-sm hover-magnetic">
+                Repository <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="https://github.com/Madhumidha-17/Real-Time-Facial-Emotion-Recognition-Using-Deep-Learning" target="_blank" class="btn btn-outline btn-sm hover-magnetic">
+                Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i>
               </a>
             </div>
           </div>
         </div>
         
-        <!-- Project Card 2 -->
-        <div class="project-card locked" id="locked-project-card">
-          <div class="project-inner">
-            <div class="lock-overlay" id="puzzle-lock-overlay">
-              <div class="lock-icon"><i class="fa-solid fa-lock"></i></div>
-              <h3>E-Commerce Store (Locked)</h3>
-              <p class="lock-desc">Solve this sequence to unlock this Full-Stack project:</p>
-              <div class="puzzle-container">
-                <span class="puzzle-seq">2, 4, 8, 16, ?</span>
-                <div class="puzzle-input-group">
-                  <input type="number" id="puzzle-answer" placeholder="Ans" class="puzzle-input">
-                  <button type="button" id="puzzle-submit-btn" class="btn btn-primary btn-sm">Solve</button>
-                </div>
-                <span id="puzzle-status" class="puzzle-status"></span>
-              </div>
-            </div>
-            <div class="unlocked-content" id="puzzle-unlocked-content" style="display: none;">
-              <span class="project-tag">Full-Stack Java</span>
-              <h3 class="project-title">E-Commerce Store</h3>
-              <p class="project-desc">
-                Developed a full-stack e-commerce web application with product browsing, shopping cart management, user authentication, and secure checkout using MVC architecture.
-              </p>
-              <div class="project-tags">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-                <span>Java Servlets</span>
-                <span>JSP</span>
-                <span>MySQL</span>
-              </div>
-              <div class="project-links">
-                <button class="project-link view-details-btn hover-magnetic" data-project="ecommerce">View Details <i class="fa-solid fa-expand"></i></button>
-                <span class="project-link disabled">Unlocked <i class="fa-solid fa-unlock-keyhole"></i></span>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Project Card 3 -->
+        <!-- Project Card 2: Blog Management System -->
         <div class="project-card">
           <div class="project-inner">
-            <h3 class="project-title">Weather Dashboard</h3>
+            <h3 class="project-title">Blog Management System</h3>
             <p class="project-desc">
-              Built a responsive weather dashboard fetching real-time data via OpenWeatherMap API to display temperature, humidity, wind speed, and a detailed 5-day forecast.
+              Developed a full-stack blog platform featuring user authentication, post creation &amp; publishing, rich text editing, role-based access control, and dynamic category management.
             </p>
             <div class="project-tags">
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>JavaScript</span>
+              <span>Java</span>
+              <span>Spring Boot</span>
+              <span>MySQL</span>
+              <span>HTML/CSS</span>
               <span>REST API</span>
             </div>
-            <div class="project-links">
-              <button class="project-link view-details-btn hover-magnetic" data-project="weather">View Details <i class="fa-solid fa-expand"></i></button>
-              <span class="project-link disabled">API Dashboard <i class="fa-solid fa-check-circle"></i></span>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Project Card 4 -->
-        <div class="project-card">
-          <div class="project-inner">
-            <h3 class="project-title">Quiz App</h3>
-            <p class="project-desc">
-              Created an interactive, web-based quiz application with multiple-choice questions, real-time score calculations, and dynamic, user-friendly rendering.
-            </p>
-            <div class="project-tags">
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>JavaScript</span>
-            </div>
-            <div class="project-links">
-              <button class="project-link view-details-btn hover-magnetic" data-project="quiz">View Details <i class="fa-solid fa-expand"></i></button>
-              <span class="project-link disabled">Interactive UI <i class="fa-solid fa-gamepad"></i></span>
+            <div class="project-links" style="gap: 16px; flex-wrap: wrap;">
+              <a href="https://github.com/Madhumidha-17/Blog-Management-System" target="_blank" class="btn btn-primary btn-sm hover-magnetic">
+                Repository <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="https://github.com/Madhumidha-17/Blog-Management-System" target="_blank" class="btn btn-outline btn-sm hover-magnetic">
+                Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
             </div>
           </div>
         </div>
@@ -697,7 +550,7 @@
         </li>
         <li class="quest-item" id="quest-globe">
           <i class="fa-regular fa-circle" id="ico-globe"></i>
-          <span>Explorer: Drag the 3D Globe</span>
+          <span>Explorer: Explore Projects</span>
         </li>
         <li class="quest-item" id="quest-chatbot">
           <i class="fa-regular fa-circle" id="ico-chatbot"></i>
@@ -705,7 +558,7 @@
         </li>
         <li class="quest-item" id="quest-puzzle">
           <i class="fa-regular fa-circle" id="ico-puzzle"></i>
-          <span>Codebreaker: Solve hidden puzzle</span>
+          <span>Codebreaker: View GitHub Activity</span>
         </li>
       </ul>
       <div class="quest-reward">
